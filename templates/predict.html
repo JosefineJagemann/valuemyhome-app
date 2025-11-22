@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Prediction · House Price Predictor{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+  <div class="col-12 col-lg-6">
+    <div class="card shadow-sm">
+      <div class="card-header bg-success text-white">
+        <h5 class="mb-0">Estimated Price</h5>
+      </div>
+      <div class="card-body text-center">
+        <div class="display-5 fw-bold text-success">${{ "{:,.0f}".format(price) }}</div>
+        <p class="text-muted mb-0">{{ confidence_msg }}</p>
+        <a href="{{ url_for('input_get') }}" class="btn btn-outline-success mt-3">New Prediction</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-lg-6">
+    <div class="card shadow-sm h-100">
+      <div class="card-header"><h6 class="mb-0">Your Inputs</h6></div>
+      <div class="card-body">
+        <div class="row small">
+          {% for k, v in inputs.items() %}
+          <div class="col-6 mb-2">
+            <span class="text-muted">{{ k.replace('_',' ').title() }}</span><br />
+            <strong>{{ v }}</strong>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

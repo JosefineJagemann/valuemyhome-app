@@ -1,0 +1,373 @@
+body, .stApp {
+    color: #111827;
+}
+
+/* Sidebar toggle visibility fix */
+[data-testid="collapsedControl"] {
+    opacity: 1 !important;
+    color: #0A0A0A !important;
+    background: #f0f0f0 !important;
+    padding: 6px 10px !important;
+    border-radius: 999px !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12) !important;
+    border: 1px solid #d1d5db !important;
+    font-weight: 600 !important;
+}
+
+body, .stApp, .block-container {
+    color: #111827;
+}
+
+/* Sidebar collapsed toggle: make it big and clearly visible */
+div[data-testid="collapsedControl"] {
+    position: fixed !important;
+    top: 1.5rem !important;
+    left: 1.5rem !important;
+    z-index: 1000 !important;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0f172a !important;          /* dark navy */
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
+    opacity: 1 !important;
+    cursor: pointer;
+}
+
+/* Make the arrow icon inside the toggle white and a bit larger */
+div[data-testid="collapsedControl"] svg {
+    width: 18px;
+    height: 18px;
+    stroke: #ffffff !important;
+    color: #ffffff !important;
+}
+
+/* Ensure sidebar toggle is always visible and clear */
+.stApp [data-testid="collapsedControl"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: scale(1.1);
+    background-color: rgba(15, 23, 42, 0.9); /* dark navy */
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+}
+
+.stApp [data-testid="collapsedControl"] button {
+    color: #e5e7eb !important;         /* light gray icon */
+}
+/* Scale main header logo larger */
+.vm-header-logo img {
+    width: 130%;
+    max-width: 260px;
+}
+/* Ensure all main headings are dark and readable */
+.block-container h1,
+.block-container h2,
+.block-container h3,
+.block-container h4 {
+    color: #111827 !important; /* deep slate / near-black */
+}
+[data-testid="stSidebar"] {
+    color: #1F2937 !important;
+}
+
+.stRadio label, .stSelectbox label, .stNumberInput label {
+    color: #1F2937 !important;
+}
+/* Ensure sidebar text is visible on light background */
+section[data-testid="stSidebar"] * {
+    color: #1F2933 !important;
+}
+/* ---- ValueMyHome typography helpers ---- */
+
+/* Main page title */
+.vmh-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                             "Segoe UI", Roboto, sans-serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.4rem;
+}
+
+/* Subtitle / intro text under the main title */
+.vmh-subtitle {
+    font-size: 0.98rem;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Section headings like ‘Enter House Details’, ‘Prediction’, ‘Location’ */
+.vmh-section-heading {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.75rem;
+}
+
+/* Main predicted price */
+.vmh-price-main {
+    font-size: 2.3rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Range / confidence text under the main price */
+.vmh-price-range {
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+/* Streamlit App Custom Styles */
+
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Styling */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Sidebar Styling */
+.stSidebar {
+    background-color: #ecf0f1;
+    padding: 20px;
+}
+
+/* Input Fields */
+input[type="number"], input[type="text"] {
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Center main content */
+section.main > div.block-container {
+    max-width: 1100px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+/* Reduce top white space */
+section.main {
+    padding-top: 1.5rem !important;
+}
+
+
+
+:root {
+/* Global typography */
+body, .stApp {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                             "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+    /* Brand / accent colors */
+    --vmh-primary: #1F7F8D;        /* deep jade blue */
+    --vmh-primary-soft: #2BA6B6;   /* lighter teal accent */
+    --vmh-primary-light: #D9F1F4;  /* pale aqua background */
+
+    /* Neutrals */
+    --vmh-bg: #F5F7FA;             /* app background */
+    --vmh-surface: #FFFFFF;        /* cards / panels */
+    --vmh-border: #E2E5EC;
+    --vmh-muted: #6B7380;
+    --vmh-text: #1A1F2B;
+    --vmh-text-soft: #434A5A;
+
+    /* Shadows & radii */
+    --vmh-radius-lg: 18px;
+    --vmh-radius-md: 12px;
+    --vmh-shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.08);
+    --vmh-shadow-subtle: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+/* Page background */
+body {
+    background: radial-gradient(circle at top left, #EAF5F7 0, #F7F8FB 50%, #F4F6FA 100%);
+    color: var(--vmh-text);
+}
+
+/* Global text */
+.stApp {
+    color: var(--vmh-text);
+}
+
+/* Main container (center content) */
+.main, .block-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Sidebar styling */
+.css-1d391kg, .sidebar .sidebar-content, section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #F1FAFB 0%, #F4F7FB 40%, #F6F8FC 100%);
+    border-right: 1px solid #E0E5F0;
+}
+
+section[data-testid="stSidebar"] > div {
+    padding-top: 1.75rem;
+}
+
+/* Generic card look for panels (intro, prediction, etc.) */
+.vmh-card {
+    background: var(--vmh-surface);
+    border-radius: var(--vmh-radius-lg);
+    box-shadow: var(--vmh-shadow-soft);
+    padding: 1.75rem 2rem;
+    border: 1px solid rgba(226, 229, 236, 0.8);
+}
+
+/* Form/controls card */
+.vmh-form-card {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: var(--vmh-radius-lg);
+    box-shadow: var(--vmh-shadow-subtle);
+    padding: 1.75rem 2rem 2rem;
+    border: 1px solid rgba(226, 229, 236, 0.9);
+}
+
+/* Prediction result card */
+.vmh-result-card {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F6FBFC 50%, #F3F7FB 100%);
+    border-radius: var(--vmh-radius-lg);
+    box-shadow: var(--vmh-shadow-soft);
+    padding: 1.75rem 2rem;
+    border: 1px solid rgba(202, 220, 231, 0.9);
+}
+
+/* Text hierarchy */
+.vmh-title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--vmh-text);
+}
+
+.vmh-subtitle {
+    font-size: 0.95rem;
+    color: var(--vmh-text-soft);
+}
+
+/* Estimated price styling */
+.vmh-price-main {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--vmh-text);
+}
+
+.vmh-price-range {
+    font-size: 0.95rem;
+    color: var(--vmh-muted);
+}
+
+/* Inputs (number inputs etc.) */
+.stNumberInput > div > div,
+.stTextInput > div > div,
+.stSelectbox > div > div {
+    background-color: #FBFCFF;
+    border-radius: 12px;
+    border: 1px solid #DDE2EE;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+}
+
+.stNumberInput > div > div:focus-within,
+.stTextInput > div > div:focus-within,
+.stSelectbox > div > div:focus-within {
+    border-color: var(--vmh-primary);
+    box-shadow: 0 0 0 1px rgba(31, 127, 141, 0.12);
+}
+
+/* Labels */
+label, .stRadio > label {
+    font-weight: 500;
+    color: var(--vmh-text-soft);
+}
+
+/* Radio buttons in sidebar */
+.stRadio > div {
+    gap: 0.35rem;
+}
+
+/* Primary button: Predict Price */
+div.stButton > button:first-child {
+    background: linear-gradient(135deg, var(--vmh-primary-soft), var(--vmh-primary));
+    color: #FFFFFF;
+    border-radius: 999px;
+    border: none;
+    padding: 0.6rem 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    box-shadow: 0 10px 20px rgba(31, 127, 141, 0.25);
+    transition: all 0.2s ease;
+}
+
+div.stButton > button:first-child:hover {
+    filter: brightness(1.05);
+    box-shadow: 0 14px 28px rgba(31, 127, 141, 0.35);
+}
+
+/* Prediction history chart container */
+.vmh-chart-card {
+    background: var(--vmh-surface);
+    border-radius: var(--vmh-radius-md);
+    box-shadow: var(--vmh-shadow-subtle);
+    border: 1px solid #E3E7F0;
+    padding: 1.25rem 1.5rem;
+}
+
+/* Tables (last predictions) */
+table {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+thead tr {
+    background: #F4F7FC !important;
+    color: var(--vmh-text-soft);
+}
+
+tbody tr:nth-child(even) {
+    background: #FBFCFF !important;
+}
+
+/* Map container tweak */
+.leaflet-container {
+    border-radius: var(--vmh-radius-md);
+    box-shadow: var(--vmh-shadow-subtle);
+    border: 1px solid #DEE4F0;
+}

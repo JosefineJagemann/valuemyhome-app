@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Enter Details · House Price Predictor{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+  <div class="col-12 col-xl-8">
+    <div class="card shadow-sm">
+      <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">Property Details</h5>
+      </div>
+      <div class="card-body">
+        <form action="{{ url_for('predict_post') }}" method="POST" id="predict-form">
+          <div class="row g-3">
+            {% for name, value in inputs.items() %}
+            <div class="col-12 col-md-6">
+              <label class="form-label">{{ name.replace('_',' ').title() }}</label>
+              <input class="form-control" type="number" step="any" name="{{ name }}" value="{{ value }}">
+            </div>
+            {% endfor %}
+          </div>
+          <button class="btn btn-primary mt-3" type="submit">Predict</button>
+          <a class="btn btn-outline-secondary mt-3" href="{{ url_for('input_get') }}">Reset</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-xl-4">
+    <div class="card shadow-sm h-100">
+      <div class="card-body">
+        <h6 class="text-uppercase text-muted">Tips</h6>
+        <ul class="small text-muted mb-0">
+          <li><strong>Grade</strong> ~ 1–13 (7 is typical)</li>
+          <li><strong>House age</strong> = 2025 − year built</li>
+          <li>Basement can be 0 if none</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

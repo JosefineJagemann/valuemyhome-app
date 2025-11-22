@@ -1,0 +1,153 @@
+
+/* Force all main headings to be dark, including 'Prediction history' */
+section.main h1,
+section.main h2,
+section.main h3,
+section.main h4,
+section.main h5,
+section.main h6 {
+	color: #111827 !important;  /* dark slate */
+}
+/* FINAL FIX for Prediction History title staying white */
+div[data-testid="stMarkdown"] h3,
+div[data-testid="stMarkdown"] h3 span {
+	color: #111827 !important;  /* dark slate */
+}
+/* Prediction history heading */
+.prediction-history-title {
+	color: #111827 !important;   /* dark slate */
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin-top: 1.5rem;
+	margin-bottom: 0.75rem;
+}
+/* Prediction section styling */
+.prediction-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1.2rem;
+	margin-bottom: 1.2rem;
+}
+.prediction-header {
+	font-size: 1.7rem;
+	font-weight: 700;
+	color: #1c1c1c;
+	margin-bottom: 14px;
+	text-align: center;
+}
+.prediction-label {
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	text-align: center;
+}
+.prediction-price {
+	font-size: 2.2rem;
+	font-weight: 800;
+	color: #000;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.prediction-range {
+	font-size: 0.95rem;
+	color: #6B7280;
+	padding-top: 8px;
+	text-align: center;
+}
+
+/* ==== Global text color override for main content ==== */
+
+/* Main page container (excluding sidebar) */
+[data-testid="stAppViewContainer"] {
+	color: #0F172A !important;  /* deep navy */
+}
+
+/* All elements inside the main content area */
+[data-testid="stAppViewContainer"] * {
+	color: #0F172A !important;
+}
+
+/* Keep sidebar text as-is (just in case) */
+[data-testid="stSidebar"] * {
+	color: #0F172A !important;
+}
+
+/* === Strong override for main form labels and helper text === */
+
+/* All labels everywhere (Bedrooms, Bathrooms, etc.) */
+label,
+.stNumberInput label,
+.stTextInput label,
+[data-testid="stNumberInput"] label,
+[data-testid="stNumberInput"] label p,
+[data-testid="stNumberInput"] > label > div > p {
+	color: #0F172A !important;   /* deep navy, high contrast */
+	font-weight: 600;
+}
+
+/* Any small text inside number inputs */
+[data-testid="stNumberInput"] p {
+	color: #0F172A !important;
+}
+
+/* General paragraph text in the main content */
+main[data-testid="stAppViewContainer"] p {
+	color: #111827 !important;
+}
+/* Force main content labels and text to dark navy */
+main[data-testid="stAppViewContainer"] * {
+	color: #1E293B !important;   /* dark, readable */
+}
+
+/* Specific fix for form labels */
+main[data-testid="stAppViewContainer"] label,
+main[data-testid="stAppViewContainer"] .stMarkdown,
+main[data-testid="stAppViewContainer"] .stTextInput label,
+main[data-testid="stAppViewContainer"] .stNumberInput label {
+	color: #0F172A !important;   /* deep elegant navy */
+	font-weight: 600;
+}
+
+/* Fix small helper text */
+main[data-testid="stAppViewContainer"] span {
+	color: #1E293B !important;
+}
+/* Force all sidebar text to a readable dark navy */
+section[data-testid="stSidebar"] * {
+	color: #1E293B !important;   /* dark slate */
+}
+
+/* Fix radio labels */
+section[data-testid="stSidebar"] .stRadio label {
+	color: #1E293B !important;
+}
+
+/* Fix headers Inside sidebar */
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 {
+	color: #0F172A !important;   /* deeper navy */
+}
+
+/* Fix model selection text */
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] label,
+section[data-testid="stSidebar"] span {
+	color: #1E293B !important;
+}
+[data-testid="stSidebar"] {
+	color: #1F2937 !important;
+}
+
+.stRadio label, .stSelectbox label, .stNumberInput label {
+	color: #1F2937 !important;
+}
+/* Brand color (teal) */
+.bg-teal { background-color: #0ea5a5; }
+.btn-teal { background-color: #0ea5a5; border-color: #0ea5a5; }
+.btn-teal:hover { background-color: #0c8b8b; border-color: #0c8b8b; }
+
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+.card-header h5 { line-height: 1.2; }

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Welcome · House Price Predictor{% endblock %}
+
+{% block content %}
+<div class="row align-items-center g-5">
+  <div class="col-12 col-lg-6">
+    <h1 class="display-5 fw-bold">Predict Seattle-area house prices in seconds</h1>
+    <p class="lead text-muted">
+      Enter a few details and get an instant estimate powered by our trained model.
+    </p>
+    <a href="{{ url_for('input_get') }}" class="btn btn-teal btn-lg">Start Prediction</a>
+  </div>
+  <div class="col-12 col-lg-6">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h5 class="mb-3">How it works</h5>
+        <ol class="mb-0">
+          <li>Enter home details on the Input page</li>
+          <li>We run the model locally</li>
+          <li>See the estimated price and confidence</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

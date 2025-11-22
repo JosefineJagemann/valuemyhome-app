@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Insights · House Price Predictor{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+  <div class="col-12 col-xl-8">
+    <div class="card shadow-sm">
+      <div class="card-header bg-info text-white">
+        <h5 class="mb-0">Model Insights</h5>
+      </div>
+      <div class="card-body">
+        <p class="text-muted">Charts go here (feature importance, residuals, etc.).</p>
+        <div class="border rounded p-3 text-center text-muted"><em>Coming soon</em></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 col-xl-4">
+    <div class="card shadow-sm h-100">
+      <div class="card-body">
+        <h6 class="text-uppercase text-muted">What to add</h6>
+        <ul class="small text-muted mb-0">
+          <li>Top feature importances</li>
+          <li>Residual distribution</li>
+          <li>Partial dependence / SHAP</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
